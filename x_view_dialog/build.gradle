@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
 android {
@@ -19,8 +20,8 @@ android {
         versionName "1.0"
 
     }
-    viewBinding{
-        enabled=true
+    viewBinding {
+        enabled = true
     }
 
     buildTypes {
@@ -34,6 +35,40 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
+publishing {
+
+//        repositories {
+//            maven {
+//                url = "http://my.org/repo"
+//            }
+//        }
+    publications {
+        maven(MavenPublication) {
+            groupId = 'io.github.nuonuoOkami'
+            artifactId = 'XViewDialog'
+            version = '1.0.0-SNAPSHOT'
+
+//                // 上传 AAR 包
+//                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+//                // 向 Maven 仓库中上传源码
+//                artifact sourceJar
+
+        }
+    }
+    repositories {
+        maven {
+            name "sonatype-Snapshots"
+            url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            credentials {
+                username = "nuonuo"
+                password = "M7N%@9J&f*VryA*"
+            }
+
+        }
+    }
+}
+
 
 dependencies {
 
