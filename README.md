@@ -1,4 +1,5 @@
 # XViewDialog
+解决android 弹窗层级痛点！
 
 ![Image text](https://github.com/nuonuoOkami/images/blob/main/xdialog.png)
 ### 简单介绍
