@@ -13,7 +13,7 @@
 
 ### 依赖使用
 
-    implementation 'io.github.nuonuoOkami:ViewDialog:1.0.0'
+     implementation 'io.github.nuonuoOkami:ViewDialog:1.0.0'
 
 ### 使用方式
 
