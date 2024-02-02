@@ -1,11 +1,10 @@
 # XViewDialog
-解决android 弹窗层级痛点！
-
 ![Image text](https://github.com/nuonuoOkami/images/blob/main/xdialog.png)
 ### 简单介绍
-处理弹窗层级问题，不在纠结弹窗弹出问题，纯原生view，随意使用
-只看level,等级越高层级越高
-妈妈也在不用担心我的弹窗无法控制层级啦！
+处理弹窗层级问题，不在纠结弹窗弹出问题，
+纯原生view，随意使用
+只看level,等级越高层级越高！
+
 
 ### 依赖库
 
