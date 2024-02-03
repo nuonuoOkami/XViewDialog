@@ -1,4 +1,4 @@
-# XViewDialog
+# ViewDialog
 ![Image text](https://github.com/nuonuoOkami/images/blob/main/xdialog.png)
 ## 简单介绍
 处理弹窗层级问题，不在纠结弹窗弹出问题。
