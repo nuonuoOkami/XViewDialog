@@ -57,6 +57,10 @@
 
     //是否可以点击外部取消
     override  fun canceledOnTouchOutside() = true
+    //业务处理
+    override fun business() {
+        super.business()
+    }
 }
 
 
