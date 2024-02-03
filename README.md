@@ -4,6 +4,7 @@
 处理弹窗层级问题，不在纠结弹窗弹出问题，
 纯原生view，随意使用
 只看level,等级越高层级越高！
+因为实现了DialogInterface ，使用方法和普通Dialog一致。
 
 
 ### 依赖库
@@ -62,6 +63,10 @@
         super.business()
     }}
 
+      //直接调用show()和dismiss()就行，无需其他操作
+        val dialog2= DemoDialog2(MainActivity@this)
+        dialog2 .show()
+        dialog2.dismiss()
 
 
 
