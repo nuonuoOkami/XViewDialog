@@ -15,12 +15,25 @@ class XViewDialogContainer : FrameLayout {
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
 
-    fun  showDialog(child: XViewDialog) {
+    fun showDialog(child: ViewDialog) {
+
 
         val params =
             LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        params.gravity
-        addView(child, params)
+        if (child.single()) {
+            children
+            val has = children.firstOrNull {
+                it::class.java.name.equals(child::class.java.name)
+            }
+            if (has != null) {
+                return
+            } else {
+                addView(child, params)
+            }
+        } else {
+            addView(child, params)
+        }
+
 
     }
 
@@ -28,6 +41,7 @@ class XViewDialogContainer : FrameLayout {
         isFocusable = true;
         isFocusableInTouchMode = true;
         requestFocus()
+        z = 65535f
 
         setOnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
@@ -36,10 +50,10 @@ class XViewDialogContainer : FrameLayout {
                     val childZ = sortByZ()
 
                     val first = childZ.firstOrNull {
-                        (it as ViewDialog).canceledAble()
+                        (it as IViewDialog).canceledAble()
                     }
                     if (first != null) {
-                        (first as ViewDialog).dismiss()
+                        (first as IViewDialog).dismiss()
                     }
                 }
 
@@ -79,6 +93,9 @@ class XViewDialogContainer : FrameLayout {
 
     }
 
+    init {
+        tag=this::class.java.name
+    }
 
 }
 
