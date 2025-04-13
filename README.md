@@ -80,8 +80,6 @@
 ## Change Log
 暂无
 
-## 联系我
-QQ:1085214089
 
 ## 博客
 https://www.jianshu.com/p/0bc335fb71ca
